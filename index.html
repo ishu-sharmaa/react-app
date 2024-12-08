@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Namaste React</title>
+  </head>
+
+  <body>
+    <div>
+        <h1>I am the header on top of root, not using react</h1>
+    </div>
+    <div id="root">
+        <h1>I am being replaced by root, thats why react can be used just in a part of app, that why it is called library</h1>  <!--this will be replaced by react.render, not APPENDED, thats why react is a library not framework, it can be added in small part/potion of the app
+        otyher FRAMEWOKS can do this, wehole app needs to be created using that framework -->
+      <!-- 1. Creating hello world code using HTML tags -->
+      <!-- uncomment to run >> <h1>Hello World</h1> -->
+    </div>
+    <div>
+        <h1>I am the footer on bottom of root, not using react</h1>
+    </div>
+   
+    <!-- 2. Creating hello world code using JS -->
+    <!-- <script>
+        const heading = document.createElement("h1"); //create a tag for html tag
+        heading.innerHTML = "Hello World from JavaScript";
+
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+    <!-- 3. How to inject react into project, using CDN (links are on CDN react google) -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- <script>
+        const heading = React.createElement("h1", {}, "Hello World from React"); //createElement takes 3 arguments : tag, object, what is needed inside tag
+        //above is a core feature
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        //above is a DOm feature, thats why dom library
+        root.render(heading);
+    </script> -->
+    <!-- //move above code to app.js -->
+
+    <script src="./App.js"></script>
+  </body>
+</html>
